@@ -1,6 +1,6 @@
 {
   "name": "easymouse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool for accessing the mouse on windows easily in NodeJS",
   "main": "index.js",
   "scripts": {
