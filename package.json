@@ -1,0 +1,17 @@
+{
+  "name": "easymouse",
+  "version": "1.0.0",
+  "description": "A tool for accessing the mouse on windows easily in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [
+    "Mouse",
+    "Rust",
+    "Bindings",
+    "easy"
+  ],
+  "author": "Jacob Allen Morris",
+  "license": "MIT"
+}
