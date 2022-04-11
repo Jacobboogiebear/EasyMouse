@@ -1,5 +1,6 @@
 use neon::prelude::*;
 
+#[repr(C)]
 struct POINT {
     x: libc::c_long,
     y: libc::c_long
@@ -48,8 +49,8 @@ fn GetCursorPos_wrapper(mut cx: FunctionContext) -> JsResult<JsArray> {
     unsafe {
         GetCursorPos(&mut point);
     }
-    let px: Handle<JsNumber> = cx.number(point.y as f64);
-    let py: Handle<JsNumber> = cx.number(point.x as f64);
+    let px: Handle<JsNumber> = cx.number(point.x as f64);
+    let py: Handle<JsNumber> = cx.number(point.y as f64);
     output_arr.set(&mut cx, 0, px);
     output_arr.set(&mut cx, 1, py);
     return  Ok(output_arr);
